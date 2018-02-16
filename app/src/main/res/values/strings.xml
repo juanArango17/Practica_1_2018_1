@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">FigurasGeometricas</string>
+    <string name="figura">Figuras</string>
+    <string name="cuadrado">Cuadrado</string>
+    <string name="circulo">Círculo</string>
+    <string name="triangulo">Triángulo</string>
+    <string name="cubo">Cubo</string>
+    <string name="parametros">Parámetros</string>
+    <string name="altura">Altura</string>
+    <string name="base">Base</string>
+    <string name="radio">Radio</string>
+    <string name="lado">Lado</string>
+    <string name="arista">Arista</string>
+    <string name="area">Area: </string>
+    <string name="perimetro">Perimetro: </string>
+    <string name="zero">0.0</string>
+    <string name="calcular">Calcular</string>
+    <string name="volumen">Volumen: </string>
+</resources>
