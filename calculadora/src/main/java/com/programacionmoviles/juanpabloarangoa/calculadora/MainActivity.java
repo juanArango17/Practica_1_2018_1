@@ -83,25 +83,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonOperation(View view) {
-        if(operacion == 0) {
-            operacion = view.getId();
-            flagDot = false;
-            operando1 = Double.parseDouble(editor.getText().toString());
-            editor.setText("");
-            switch (operacion) {
-                case R.id.bPlus:
-                    bPlus.setBackgroundColor(getResources().getColor(R.color.red));
-                    break;
-                case R.id.bMinus:
-                    bMinus.setBackgroundColor(getResources().getColor(R.color.red));
-                    break;
-                case R.id.bMulti:
-                    bMulti.setBackgroundColor(getResources().getColor(R.color.red));
-                    break;
-                case R.id.bDiv:
-                    bDiv.setBackgroundColor(getResources().getColor(R.color.red));
-                    break;
+        try{
+            if(operacion == 0) {
+                operacion = view.getId();
+                flagDot = false;
+                operando1 = Double.parseDouble(editor.getText().toString());
+                editor.setText("");
+                switch (operacion) {
+                    case R.id.bPlus:
+                        bPlus.setBackgroundColor(getResources().getColor(R.color.white));
+                        break;
+                    case R.id.bMinus:
+                        bMinus.setBackgroundColor(getResources().getColor(R.color.white));
+                        break;
+                    case R.id.bMulti:
+                        bMulti.setBackgroundColor(getResources().getColor(R.color.white));
+                        break;
+                    case R.id.bDiv:
+                        bDiv.setBackgroundColor(getResources().getColor(R.color.white));
+                        break;
+                }
             }
+        }catch(NumberFormatException f){
+            operacion = 0;
+            Toast.makeText(MainActivity.this, "Ingrese operando", Toast.LENGTH_SHORT).show();
         }
     }
     public void buttonEqual(View view) {

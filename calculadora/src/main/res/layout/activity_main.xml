@@ -35,6 +35,7 @@
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/one"
+                android:textSize="25sp"
                 android:id="@+id/bOne"
                 android:onClick="buttonNumber"
                 />
@@ -45,6 +46,7 @@
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/two"
+                android:textSize="25sp"
                 android:id="@+id/bTwo"
                 android:onClick="buttonNumber"
                 />
@@ -55,6 +57,7 @@
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/three"
+                android:textSize="25sp"
                 android:id="@+id/bThree"
                 android:onClick="buttonNumber"
                 />
@@ -65,6 +68,7 @@
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/plus"
+                android:textSize="25sp"
                 android:id="@+id/bPlus"
                 android:onClick="buttonOperation"
                 />
@@ -79,6 +83,7 @@
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/four"
+                android:textSize="25sp"
                 android:id="@+id/bFour"
                 android:onClick="buttonNumber"
                 />
@@ -89,6 +94,7 @@
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/five"
+                android:textSize="25sp"
                 android:id="@+id/bFive"
                 android:onClick="buttonNumber"
                 />
@@ -99,6 +105,7 @@
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/six"
+                android:textSize="25sp"
                 android:id="@+id/bSix"
                 android:onClick="buttonNumber"
                 />
@@ -109,6 +116,7 @@
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/minus"
+                android:textSize="25sp"
                 android:id="@+id/bMinus"
                 android:onClick="buttonOperation"
                 />
@@ -123,6 +131,7 @@
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/seven"
+                android:textSize="25sp"
                 android:id="@+id/bSeven"
                 android:onClick="buttonNumber"
                 />
@@ -133,6 +142,7 @@
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/eight"
+                android:textSize="25sp"
                 android:id="@+id/bEight"
                 android:onClick="buttonNumber"
                 />
@@ -143,6 +153,7 @@
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/nine"
+                android:textSize="25sp"
                 android:id="@+id/bNine"
                 android:onClick="buttonNumber"
                 />
@@ -153,6 +164,7 @@
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/multi"
+                android:textSize="25sp"
                 android:id="@+id/bMulti"
                 android:onClick="buttonOperation"
                 />
@@ -167,6 +179,7 @@
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/dot"
+                android:textSize="25sp"
                 android:id="@+id/bDot"
                 android:onClick="buttonDot"
                 />
@@ -179,6 +192,7 @@
                 android:background="@color/limegreen"
                 android:onClick="buttonNumber"
                 android:text="@string/zero"
+                android:textSize="25sp"
                 android:textAllCaps="false" />
             <Button
                 android:layout_width="wrap_content"
@@ -187,6 +201,7 @@
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/equal"
+                android:textSize="25sp"
                 android:id="@+id/bEqual"
                 android:onClick="buttonEqual"
                 />
@@ -197,12 +212,10 @@
                 android:textAllCaps="false"
                 android:background="@color/limegreen"
                 android:text="@string/div"
+                android:textSize="25sp"
                 android:id="@+id/bDiv"
                 android:onClick="buttonOperation"
                 />
-            <!--
-            falta!!!!
-            -->
         </TableRow>
 
 
