@@ -17,11 +17,6 @@ public class MainActivity extends AppCompatActivity {
     int operacion = 0;
     double operando1,operando2;
 
-    /*Falta mirar que hacer para borrar texto
-    * Falta planear la lógica para guardar operandos y arrojar resultados
-    * rev. 15_02_18
-    * */
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
