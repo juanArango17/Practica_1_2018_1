@@ -29,7 +29,8 @@
         <TableRow
             android:layout_weight="1">
             <Button
-                android:background="@color/limegreen"
+                android:background="@color/darkgreen"
+                android:layout_margin="2dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -42,7 +43,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@color/limegreen"
+                android:background="@color/darkgreen"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/two"
@@ -53,7 +55,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@color/limegreen"
+                android:background="@color/darkgreen"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/three"
@@ -64,7 +67,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@color/limegreen"
+                android:background="@color/darkgreen"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/plus"
@@ -79,7 +83,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@color/limegreen"
+                android:background="@color/darkgreen"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/four"
@@ -90,7 +95,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@color/limegreen"
+                android:background="@color/darkgreen"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/five"
@@ -101,7 +107,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@color/limegreen"
+                android:background="@color/darkgreen"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/six"
@@ -112,7 +119,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@color/limegreen"
+                android:background="@color/darkgreen"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/minus"
@@ -127,7 +135,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@color/limegreen"
+                android:background="@color/darkgreen"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/seven"
@@ -138,7 +147,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@color/limegreen"
+                android:background="@color/darkgreen"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/eight"
@@ -149,7 +159,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@color/limegreen"
+                android:background="@color/darkgreen"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/nine"
@@ -160,7 +171,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@color/limegreen"
+                android:background="@color/darkgreen"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/multi"
@@ -175,7 +187,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@color/limegreen"
+                android:background="@color/darkgreen"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/dot"
@@ -189,7 +202,8 @@
                 android:layout_width="99dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@color/limegreen"
+                android:background="@color/darkgreen"
+                android:layout_margin="2dp"
                 android:onClick="buttonNumber"
                 android:text="@string/zero"
                 android:textSize="25sp"
@@ -197,7 +211,8 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@color/limegreen"
+                android:background="@color/darkgreen"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:textAllCaps="false"
                 android:text="@string/equal"
@@ -210,7 +225,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:textAllCaps="false"
-                android:background="@color/limegreen"
+                android:background="@color/darkgreen"
+                android:layout_margin="2dp"
                 android:text="@string/div"
                 android:textSize="25sp"
                 android:id="@+id/bDiv"

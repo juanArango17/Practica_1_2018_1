@@ -137,10 +137,10 @@ public class MainActivity extends AppCompatActivity {
             operando2 = 0.0;
             flagDot   = false;
             flagClean = true;
-            bPlus.setBackgroundColor(getResources().getColor(R.color.limegreen));
-            bMinus.setBackgroundColor(getResources().getColor(R.color.limegreen));
-            bMulti.setBackgroundColor(getResources().getColor(R.color.limegreen));
-            bDiv.setBackgroundColor(getResources().getColor(R.color.limegreen));
+            bPlus.setBackgroundColor(getResources().getColor(R.color.darkgreen));
+            bMinus.setBackgroundColor(getResources().getColor(R.color.darkgreen));
+            bMulti.setBackgroundColor(getResources().getColor(R.color.darkgreen));
+            bDiv.setBackgroundColor(getResources().getColor(R.color.darkgreen));
         }catch (NumberFormatException f){
             Toast.makeText(MainActivity.this, "ERROR: falta ingresar operación y/o operandos", Toast.LENGTH_SHORT).show();
         }
