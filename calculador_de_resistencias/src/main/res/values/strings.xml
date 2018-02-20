@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">Calculador de Resistencias</string>
+    <string name="title">Calculador Resistencia de 3 franjas + tolerancia</string>
+    <string name="result">Resultados:</string>
+    <string name="msg1">El valor de la resistencia es de </string>
+    <string name="msg2">Con una tolerancia de </string>
+
+    <string-array name="colores_valores">
+        <item>Negro</item>
+        <item>Marrón</item>
+        <item>Rojo</item>
+        <item>Naranja</item>
+        <item>Amarillo</item>
+        <item>Verde</item>
+        <item>Azul</item>
+        <item>Purpura</item>
+        <item>Gris</item>
+        <item>Blanco</item>
+    </string-array>
+
+    <string-array name="colores_tolerancias">
+        <item>Marrón (±1%)</item>
+        <item>Rojo (±2%)</item>
+        <item>Dorado (±5%)</item>
+        <item>Plateado (±10±)</item>
+    </string-array>
+
 </resources>

@@ -27,7 +27,7 @@
     <string name="fraseCine">ir al cine</string>
     <string name="fraseVideo">jugar videojuegos</string>
     <string name="fraseNadar">nadar</string>
-    <string name="fraseFutbol">Jugar Futbol</string>
+    <string name="fraseFutbol">jugar Futbol</string>
 
     <string-array name="all_cities">
         <item>Medellín</item>
