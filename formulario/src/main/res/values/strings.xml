@@ -12,7 +12,7 @@
     <string name="sex">Sexo: </string>
     <string name="sexM">Masculino</string>
     <string name="sexF">Femenino</string>
-    <string name="date">Fecha de Nacimiento:</string>
+    <string name="date">Fecha de Nacimiento: </string>
     <string name="pick_date">DD/MM/YY</string>
     <string name="cities">Ciudad: </string>
     <string name="hobbies">Hobbies: </string>
@@ -22,6 +22,12 @@
     <string name="futbol">Futbol</string>
     <string name="aceptar">Aceptar</string>
     <string name="information">Información</string>
+
+    <string name="likesTo">le gusta: </string>
+    <string name="fraseCine">ir al cine</string>
+    <string name="fraseVideo">jugar videojuegos</string>
+    <string name="fraseNadar">nadar</string>
+    <string name="fraseFutbol">Jugar Futbol</string>
 
     <string-array name="all_cities">
         <item>Medellín</item>

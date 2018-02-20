@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -20,7 +21,7 @@ import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String usuario,pass1,pass2,email,sexo,hobbies;
+    private String usuario,pass1,pass2,email,sexo,hobbies,fecha;
     private EditText eUser, ePass1, ePass2, eMail;
     private RadioButton rSexM, rSexF;
     private CheckBox cCine,cVideo,cNadar,cFutbol;
@@ -31,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
     public String ciudad;
     public EditText eDatePicker;
     private int day_,month_,year_;
-    private boolean flagFinish1 = false;
 
 
     @Override
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         cCine       = findViewById(R.id.cCine);
         cVideo      = findViewById(R.id.cVideo);
         cNadar      = findViewById(R.id.cNadar);
+        cFutbol     = findViewById(R.id.cFutbol);
         sCities     = findViewById(R.id.sCities);
         bAceptar    = findViewById(R.id.bAceptar);
         tInfo       = findViewById(R.id.tInfo);
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onRadioButtonClicked(View view) {
-        if(view.getId()==R.id.rSexM) {
+        if(rSexM.isChecked()) {
             sexo = getString(R.string.sexM);
         }else {
             sexo = getString(R.string.sexF);
@@ -87,11 +88,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onButtonAceptar(View view) {
+        String msg = getString(R.string.information)+"\n";
         usuario = eUser.getText().toString();
         pass1   = ePass1.getText().toString();
         pass2   = ePass2.getText().toString();
         email   = eMail.getText().toString();
-        finishOrNot();
+        fecha   = eDatePicker.getText().toString();
+
+        if(finishOrNot1()){
+            if(!pass1.equals(pass2)){
+                Toast.makeText(MainActivity.this, "Contraseñas diferentes", Toast.LENGTH_SHORT).show();
+            }else{
+                rearangeHobbies();
+                msg += getString(R.string.name_)+ " " + usuario;   msg += "\n";
+                msg += getString(R.string.password1)+ " " + pass1; msg += "\n";
+                msg += getString(R.string.email)+ " " + email;     msg += "\n";
+                msg += getString(R.string.sex)+ " " + sexo;        msg += "\n";
+                msg += getString(R.string.date)+ " " + fecha;      msg += "\n";
+                msg += getString(R.string.cities)+ " " + ciudad;   msg += "\n";
+                msg += getString(R.string.hobbies)+ " " + hobbies;
+                tInfo.setText(msg);
+            }
+        }
     }
 
     public void onButtonDate(View view) {
@@ -108,21 +126,26 @@ public class MainActivity extends AppCompatActivity {
         datePickerDialog.show();
     }
 
-    private void finishOrNot(){
-        if(TextUtils.isEmpty(usuario)){
+    private boolean finishOrNot1(){
+        boolean flagFinish1;
+        if(TextUtils.isEmpty(usuario) || TextUtils.isEmpty(pass1) || TextUtils.isEmpty(pass2) || TextUtils.isEmpty(email) || TextUtils.isEmpty(fecha)){
             flagFinish1 = false;
-        }else if(TextUtils.isEmpty(pass1)){
+            Toast.makeText(MainActivity.this, "Falta alguna casilla por llenar", Toast.LENGTH_SHORT).show();
+        }else if (!cCine.isChecked() && !cVideo.isChecked() && !cNadar.isChecked() && !cFutbol.isChecked()){
+            Toast.makeText(MainActivity.this, "Falta seleccionar algún hobby", Toast.LENGTH_SHORT).show();
             flagFinish1 = false;
-        }else if(TextUtils.isEmpty(pass2)){
-            flagFinish1 = false;
-        }else if(TextUtils.isEmpty(email)){
-            flagFinish1 = false;
-        }/*else if(!cCine.isChecked() && !cVideo.isChecked() && ){
-            flagFinish1 = false;
-        }else*/
-
-        if(!flagFinish1){
-            Toast.makeText(MainActivity.this, "Falta alguna casilla", Toast.LENGTH_SHORT).show();
         }
+        else{
+            flagFinish1 = true;
+        }
+        return flagFinish1;
+    }
+
+    private void rearangeHobbies(){
+        hobbies = getString(R.string.likesTo);
+        if(cCine.isChecked())   { hobbies += getString(R.string.fraseCine);   hobbies += ", ";}
+        if(cVideo.isChecked())  { hobbies += getString(R.string.fraseVideo);  hobbies += ", ";}
+        if(cNadar.isChecked())  { hobbies += getString(R.string.fraseNadar);  hobbies += ", ";}
+        if(cFutbol.isChecked()) { hobbies += getString(R.string.fraseFutbol);}
     }
 }
