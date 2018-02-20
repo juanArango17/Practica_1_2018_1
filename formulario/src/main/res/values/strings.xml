@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Formulario</string>
+    <string name="register">Registrando</string>
+    <string name="name_">Usuario: </string>
+    <string name="nameHint">User</string>
+    <string name="password1">Contraseña: </string>
+    <string name="password1Hint">Password</string>
+    <string name="password2">Repetir Contraseña: </string>
+    <string name="password2Hint">Password2</string>
+    <string name="email">Correo: </string>
+    <string name="emailHint">Email</string>
+    <string name="sex">Sexo: </string>
+    <string name="sexM">Masculino</string>
+    <string name="sexF">Femenino</string>
+    <string name="date">Fecha de Nacimiento:</string>
+    <string name="pick_date">DD/MM/YY</string>
+    <string name="cities">Ciudad: </string>
+    <string name="hobbies">Hobbies: </string>
+    <string name="cine">Cine</string>
+    <string name="videojuegos">Videoj.</string>
+    <string name="nadar">Nadar</string>
+    <string name="futbol">Futbol</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="information"></string>
+
+
 </resources>
