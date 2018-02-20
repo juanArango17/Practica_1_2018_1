@@ -150,5 +150,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void buttonClear(View view) {
         editor.setText("");
+        flagDot   = false;
     }
 }
