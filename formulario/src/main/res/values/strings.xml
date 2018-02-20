@@ -21,7 +21,33 @@
     <string name="nadar">Nadar</string>
     <string name="futbol">Futbol</string>
     <string name="aceptar">Aceptar</string>
-    <string name="information"></string>
+    <string name="information">Información</string>
+
+    <string-array name="all_cities">
+        <item>Medellín</item>
+        <item>Itagüí</item>
+        <item>Envigado</item>
+        <item>Sabaneta</item>
+        <item>Bello</item>
+        <item>Bogotá</item>
+        <item>Cali</item>
+        <item>Barranquilla</item>
+        <item>Cartagena</item>
+        <item>Soledad</item>
+        <item>Cúcuta</item>
+        <item>Ibagué</item>
+        <item>Soacha</item>
+        <item>Bucaramanga</item>
+        <item>Santa Marta</item>
+        <item>Villavicencio</item>
+        <item>Valledupar</item>
+        <item>Pereira</item>
+        <item>Buenaventura</item>
+        <item>Pasto</item>
+        <item>Manizales</item>
+        <item>Montería</item>
+        <item>Neiva</item>
+    </string-array>
 
 
 </resources>

@@ -145,18 +145,24 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <TextView
+            <Button
+                android:id="@+id/bDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/date"
                 android:layout_weight="1"
                 android:textSize="22sp"
                 android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:onClick="onButtonDate"
                 />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
                 android:layout_weight="1"
                 android:textSize="22sp"
                 android:hint="@string/pick_date"
@@ -245,5 +251,4 @@
             android:textColor="@color/black"
             android:textSize="20sp"/>
     </LinearLayout>
-
 </ScrollView>

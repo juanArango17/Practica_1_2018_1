@@ -16,5 +16,6 @@
     <string name="div">/</string>
     <string name="dot">.</string>
     <string name="equal">=</string>
+    <string name="CA">CA</string>
 
 </resources>

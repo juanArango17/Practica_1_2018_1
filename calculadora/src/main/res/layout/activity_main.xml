@@ -8,9 +8,10 @@
     tools:context="com.programacionmoviles.juanpabloarangoa.calculadora.MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="false"
             android:cursorVisible="true"
@@ -19,6 +20,19 @@
             android:inputType="number"
             android:textColor="@color/black"
             android:id="@+id/editor"
+            android:layout_weight="100"
+            />
+        <Button
+            android:id="@+id/bClear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/darkgreen"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:text="@string/CA"
+            android:textSize="25sp"
+            android:onClick="buttonClear"
             />
     </LinearLayout>
     <TableLayout

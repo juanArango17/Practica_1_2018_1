@@ -10,12 +10,13 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     EditText editor;
 
-    Button bOne,bTwo,bThree,bFour,bFive,bSix,bSeven,bEight,bNine,bZero;
-    Button bPlus,bMinus,bMulti,bDiv;
-    Button bDot,bEqual;
-    boolean flagDot = false,flagClean=false;
-    int operacion = 0;
-    double operando1,operando2;
+    private Button bOne,bTwo,bThree,bFour,bFive,bSix,bSeven,bEight,bNine,bZero;
+    private Button bPlus,bMinus,bMulti,bDiv;
+    private Button bDot,bEqual;
+    private Button bClear;
+    private boolean flagDot = false,flagClean=false;
+    private int operacion = 0;
+    private double operando1,operando2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         bDiv   = findViewById(R.id.bDiv);
         bDot   = findViewById(R.id.bDot);
         bEqual = findViewById(R.id.bEqual);
+        bClear = findViewById(R.id.bClear);
     }
 
     public void buttonNumber(View view){
@@ -144,5 +146,9 @@ public class MainActivity extends AppCompatActivity {
         }catch (NumberFormatException f){
             Toast.makeText(MainActivity.this, "ERROR: falta ingresar operación y/o operandos", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void buttonClear(View view) {
+        editor.setText("");
     }
 }
