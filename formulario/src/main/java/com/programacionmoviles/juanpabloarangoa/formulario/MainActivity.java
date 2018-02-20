@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void rearangeHobbies(){
-        hobbies = getString(R.string.likesTo);
+        hobbies = getString(R.string.likesTo)+" ";
         if(cCine.isChecked())   { hobbies += getString(R.string.fraseCine);   hobbies += ", ";}
         if(cVideo.isChecked())  { hobbies += getString(R.string.fraseVideo);  hobbies += ", ";}
         if(cNadar.isChecked())  { hobbies += getString(R.string.fraseNadar);  hobbies += ", ";}
