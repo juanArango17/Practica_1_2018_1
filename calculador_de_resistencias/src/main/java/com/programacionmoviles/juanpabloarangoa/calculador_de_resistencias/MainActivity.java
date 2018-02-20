@@ -195,6 +195,7 @@ public class MainActivity extends AppCompatActivity {
         }
         resultado += "\n" + getString(R.string.msg2)+" ";
         resultado += tolerancias[ft]+".";
+
         tResult.setText(resultado);
 
     }
