@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(finishOrNot1()){
             if(!pass1.equals(pass2)){
-                Toast.makeText(MainActivity.this, "Contraseñas diferentes", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, getString(R.string.userMsg1), Toast.LENGTH_SHORT).show();
             }else{
                 rearangeHobbies();
                 msg += getString(R.string.name_)+ " " + usuario;   msg += "\n";
@@ -130,9 +130,9 @@ public class MainActivity extends AppCompatActivity {
         boolean flagFinish1;
         if(TextUtils.isEmpty(usuario) || TextUtils.isEmpty(pass1) || TextUtils.isEmpty(pass2) || TextUtils.isEmpty(email) || TextUtils.isEmpty(fecha)){
             flagFinish1 = false;
-            Toast.makeText(MainActivity.this, "Falta alguna casilla por llenar", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, getString(R.string.userMsg2), Toast.LENGTH_SHORT).show();
         }else if (!cCine.isChecked() && !cVideo.isChecked() && !cNadar.isChecked() && !cFutbol.isChecked()){
-            Toast.makeText(MainActivity.this, "Falta seleccionar algún hobby", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, getString(R.string.userMsg3), Toast.LENGTH_SHORT).show();
             flagFinish1 = false;
         }
         else{

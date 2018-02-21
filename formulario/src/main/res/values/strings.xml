@@ -29,6 +29,10 @@
     <string name="fraseNadar">nadar</string>
     <string name="fraseFutbol">jugar Futbol</string>
 
+    <string name="userMsg1">Contraseñas diferentes</string>
+    <string name="userMsg2">Falta alguna casilla por llenar</string>
+    <string name="userMsg3">Falta seleccionar algún hobby</string>
+
     <string-array name="all_cities">
         <item>Medellín</item>
         <item>Itagüí</item>
