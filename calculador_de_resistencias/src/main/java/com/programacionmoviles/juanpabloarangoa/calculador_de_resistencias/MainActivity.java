@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private int[] comercial = {10,12,15,18,22,27,33,39,47,51,56,68,82};//[0-12]
     private TextView tResult;
     private int f1,f2,f3,ft;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
