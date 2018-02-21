@@ -2,6 +2,7 @@ package com.programacionmoviles.juanpabloarangoa.calculador_de_resistencias;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,11 +15,9 @@ public class MainActivity extends AppCompatActivity {
     private Spinner  sFranja1, sFranja2, sFranja3, sFranja4;
     private String[] unidades = {"Ω","kΩ","MΩ","GΩ"};
     private String[] tolerancias = {"(±1%)","(±2%)","(±5%)","(±10%)"};
-
+    private int[] comercial = {10,12,15,18,22,27,33,39,47,51,56,68,82};//[0-12]
     private TextView tResult;
-
     private int f1,f2,f3,ft;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -167,7 +166,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
     public void onClickListener(View view) {
         String resultado = getString(R.string.result) + "\n";
         resultado += getString(R.string.msg1) + " ";
@@ -196,7 +194,53 @@ public class MainActivity extends AppCompatActivity {
         resultado += "\n" + getString(R.string.msg2)+" ";
         resultado += tolerancias[ft]+".";
 
-        tResult.setText(resultado);
+        resultado += lookComercialValue();
 
+        tResult.setText(resultado);
+    }
+    private String lookComercialValue(){
+        String msg = "\n\n"+getString(R.string.msg3)+" ";
+        int value = 10*f1+f2, minComercial = 100, f1c,f2c;
+        int i;
+        for(i = 0; i <= 12; i += 1){
+            if(absolute(comercial[i]-value) <= absolute(minComercial-value)){
+                minComercial = comercial[i];
+                /*
+                Log.d("Valor Comercial ",String.valueOf(absolute(comercial[i]-value)));
+                Log.d("minComercial",String.valueOf(minComercial));*/
+            }
+        }
+
+        f1c = minComercial/10;
+        f2c = minComercial%10;
+        switch(f3){
+            case 0:
+                msg += String.valueOf(10*f1c+f2c) +" "+ unidades[0]; break;
+            case 1:
+                msg += String.valueOf(10*(10*f1c+f2c)) +" "+ unidades[0]; break;
+            case 2:
+                msg += String.valueOf(f1c) +"."+ String.valueOf(f2c) +" "+ unidades[1]; break;
+            case 3:
+                msg += String.valueOf(10*f1c+f2c) +" "+ unidades[1]; break;
+            case 4:
+                msg += String.valueOf(10*(10*f1c+f2c)) +" "+ unidades[1]; break;
+            case 5:
+                msg += String.valueOf(f1c) +"."+ String.valueOf(f2c) +" "+ unidades[2]; break;
+            case 6:
+                msg += String.valueOf(10*f1c+f2c) +" "+ unidades[2]; break;
+            case 7:
+                msg += String.valueOf(10*(10*f1c+f2c)) +" "+ unidades[2]; break;
+            case 8:
+                msg += String.valueOf(f1c) +"."+ String.valueOf(f2c) +" "+ unidades[3]; break;
+            default:
+                msg += String.valueOf(10*f1c+f2c) +" "+ unidades[3];
+        }
+        return msg;
+    }
+    private int absolute(int value){
+        if(value<0){
+            value *= -1;
+        }
+        return value;
     }
 }

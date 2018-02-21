@@ -4,6 +4,7 @@
     <string name="result">Resultados:</string>
     <string name="msg1">El valor de la resistencia es de </string>
     <string name="msg2">Con una tolerancia de </string>
+    <string name="msg3">El valor comercial mas cercano es de </string>
 
     <string-array name="colores_valores">
         <item>Negro</item>
