@@ -1,6 +1,7 @@
 package com.programacionmoviles.juanpabloarangoa.formulario;
 
 import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     public EditText eDatePicker;
     private int day_,month_,year_;
 
+    private static DatePickerDialog.OnDateSetListener dateSelectorListener;
+    private static final int TIPO_DIALOGO = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +80,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Calendar calendario = Calendar.getInstance();
+        day_ = calendario.get(Calendar.DAY_OF_MONTH);
+        month_ = calendario.get(Calendar.MONTH);
+        year_ = calendario.get(Calendar.YEAR);
+        eDatePicker.setText(day_+"/"+(month_+1)+"/"+year_);
+
+        dateSelectorListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+
+                month_ = month;
+                day_ = dayOfMonth;
+                year_ = year;
+                eDatePicker.setText(day_+"/"+(month_+1)+"/"+year_);
+            }
+        };
+
+    }
+
+    @Override
+    protected Dialog onCreateDialog(int id) {
+        switch (id){
+            case 0:
+                return new DatePickerDialog(this, dateSelectorListener,year_,month_,day_);
+        }
+        return null;
     }
 
     public void onRadioButtonClicked(View view) {
@@ -113,17 +142,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onButtonDate(View view) {
-        final Calendar calendario = Calendar.getInstance();
-        day_   = calendario.get(Calendar.DAY_OF_MONTH);
-        month_ = calendario.get(Calendar.MONTH);
-        year_  = calendario.get(Calendar.YEAR);
-        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                eDatePicker.setText(dayOfMonth+"/"+(month+1)+"/"+year);
-            }
-        },day_,month_,year_);
-        datePickerDialog.show();
+        showDialog(0);
     }
 
     private boolean finishOrNot1(){

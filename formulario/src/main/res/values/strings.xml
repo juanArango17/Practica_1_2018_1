@@ -13,6 +13,7 @@
     <string name="sexM">Masculino</string>
     <string name="sexF">Femenino</string>
     <string name="date">Fecha de Nacimiento: </string>
+    <string name="date2">Fecha de Nacimiento </string>
     <string name="pick_date">DD/MM/YY</string>
     <string name="cities">Ciudad: </string>
     <string name="hobbies">Hobbies: </string>

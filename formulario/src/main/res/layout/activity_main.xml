@@ -149,7 +149,7 @@
                 android:id="@+id/bDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/date"
+                android:text="@string/date2"
                 android:layout_weight="1"
                 android:textSize="22sp"
                 android:textColor="@color/black"
